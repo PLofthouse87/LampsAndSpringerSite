@@ -51,6 +51,36 @@
         <h1>Say hello to Lamps and Springer</h1>
     </header>
 
+    <!--The contact form-->
+    <form>
+        <fieldset id="contactFormUserDetails" class="">
+            <!--Need to put the name fields in their own column-->
+            <div class="mb-3 col-6" id="contactFormFirstNamSet">
+                <label for="contactFormFirstNam" class="form-label">First Name:</label>
+                <input type="text" class="form-control" id="contactFormFirstNam">
+            </div>
+            <div class="mb-3 col-6" id="contactFormLastNamSet">
+                <label for="contactFormLastNam" class="form-label">Last Name:</label>
+                <input type="text" class="form-control" id="contactFormLastNam">
+            </div>
+            <div class="mb-3 col-6" id="contactFormEmailSet">
+                <label for="contactFormEmail" class="form-label">Email Address:</label>
+                <input type="email" class="form-control" id="contactFormEmail">
+            </div>
+        </fieldset>
+        <fieldset id="contactFormMessageDetails">
+            <div class="mb-3 col-6" id="contactFormMessageSet">
+                <label for="contactFormMessage" class="form-label">Your Message for Springer and Lamps:</label>
+                <textarea class="form-control" id="contactFormMessage" rows="3"></textarea>
+            </div>
+        </fieldset>
+        <fieldset id="contactFormSubmitDetails">
+            <div class="mb-3 col-6" id="contactFormSubmitButtonSet">
+                <button type="submit" class="btn btn-primary" id="contactFormSubmitButton">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+
 
     <!--Scripts NO CONTENT BELOW HERE-->
     <script src="app.js"></script>
