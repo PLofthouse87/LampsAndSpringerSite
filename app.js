@@ -12,35 +12,49 @@
         {
             name: "Lamps",
             dob: lampsDob,
+            pronoun: "He",
             placeOfBirth: "Alexandria in Egypt",
-            personality: "Reserved but very affectionate",
-            appearance: "Black fur shifting to brown in places with bright yellow eyes.",
-            crime: "Worked out how to wobble the kitchen door in such a way that he can open it. But he's such a sweetheart he only does so when he's lonely and wants to be in the kitchen with you",
+            personality: "reserved but very affectionate",
+            appearance: "black fur shifting to brown in places with bright yellow eyes.",
+            crime: "worked out how to wobble the kitchen door in such a way that he can open it. But he's such a sweetheart he only does so when he's lonely and wants to be in the kitchen with you",
             favFood: "Chicken",
-            favTreat: "Salmon paste tube",
+            favTreat: "salmon paste tubes",
             favouriteGame: "Learning tricks",
-            vocalness: "Quite quiet"
+            vocalness: "quite quiet"
         },
         {
             name: "Springer",
             dob: springerDob,
+            pronoun: "she",
             placeOfBirth: "Alexandria in Egypt",
-            appearance: "White fur with black patches, notably on one ear and all of her tale. She also has a pink ear",
-            crime: "Managed to jump up on top of the cupboards in the Kitchen. Then with a little more trouble worked out how to get back down",
+            personality: "affectionate, friendly and very affectionate",
+            appearance: "white fur with black patches, notably on one ear and all of her tale. She also has a pink ear",
+            crime: "managed to jump up on top of the cupboards in the Kitchen. Then with a little more trouble worked out how to get back down",
             favFood: "Lamb",
-            favTreat: "Salmon paste tube",
+            favTreat: "salmon paste tubes",
             favouriteGame: "Chasing things",
-            vocalness: "Very vocal and very loud"
+            vocalness: "very vocal and very loud"
         }
     ]
 
-    console.log(catBios[0].dob);
-    console.log(catBios[1].dob);
     //Creating a function that takes one argument, name
     //The function will use a for loop and an if statement to check each object to see if the value paired with the name key matches the argument
     //If it does then index of will be used to pull that object out of the array and create a new variable
     //That variable will then be combined with dot notation to create a template literal that will be inserted into the innerHTML of an element on the corresponding web page
-    function catBioWriter(name) {}
+    function catBioWriter(name) {
+        //Creating the local variable bio to hold the the object the for loop/if statement selects, as an empty array
+        let bio = "";
+        //Creating the for loop
+        for (let i=0; i < catBios.length; i++) {
+            //Creating the if statement to check if the name value matches the argument
+            if (catBios[i].name === name) {
+                bio = catBios[i];
+        
+            }
+        }
+        return `${bio.name} was born in ${bio.placeOfBirth} on ${bio.dob.toDateString()}. ${bio.pronoun} has ${bio.appearance} and is ${bio.personality}. ${bio.pronoun} likes to eat ${bio.favFood} and loves ${bio.favTreat} as a treat! Their most impressive crime was when they ${bio.crime}. ${bio.pronoun} likes to play ${bio.favouriteGame} and when it comes to communicating ${bio.pronoun.toLowerCase()} is ${bio.vocalness}.
+        `
+    }
 
     //Array of Images
     //Creating the array mainImageOps to hold the HTML for all three mainPageImage options
@@ -135,7 +149,7 @@ if(document.getElementById("lampsBody")) {
     //Events
     //Creating onload events to populate the lampsText and springerText variables with text
     window.addEventListener("load", (event) => {
-        lampsText.innerHTML = "Super Cart!";
+        lampsText.innerHTML = catBioWriter("Lamps");
     });
 }
 
@@ -151,7 +165,7 @@ if(document.getElementById("springerBody")) {
     //Events
     //Creating onload events to populate the lampsText and springerText variables with text
     window.addEventListener("load", (event) => {
-        springerText.innerHTML = "Drawer Queen!";
+        springerText.innerHTML = catBioWriter("Springer");
     });
 }
 
