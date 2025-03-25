@@ -3,12 +3,15 @@
 //console.log("Hello World!");
 
 //---Code not tied to one HTML file---
+    //Creating date objects to hold dates of birth for each cat
+    const lampsDob = new Date("2018-09-15");
+    const springerDob = new Date("2019-05-15");
     //Array of Objects
     //Creating the array catBios to hold an array of two objects each holding the bio details for the respective cat
     const catBios = [
         {
             name: "Lamps",
-            dob: "TBD",
+            dob: lampsDob,
             placeOfBirth: "Alexandria in Egypt",
             personality: "Reserved but very affectionate",
             appearance: "Black fur shifting to brown in places with bright yellow eyes.",
@@ -20,7 +23,7 @@
         },
         {
             name: "Springer",
-            dob: "TBD",
+            dob: springerDob,
             placeOfBirth: "Alexandria in Egypt",
             appearance: "White fur with black patches, notably on one ear and all of her tale. She also has a pink ear",
             crime: "Managed to jump up on top of the cupboards in the Kitchen. Then with a little more trouble worked out how to get back down",
@@ -30,6 +33,14 @@
             vocalness: "Very vocal and very loud"
         }
     ]
+
+    console.log(catBios[0].dob);
+    console.log(catBios[1].dob);
+    //Creating a function that takes one argument, name
+    //The function will use a for loop and an if statement to check each object to see if the value paired with the name key matches the argument
+    //If it does then index of will be used to pull that object out of the array and create a new variable
+    //That variable will then be combined with dot notation to create a template literal that will be inserted into the innerHTML of an element on the corresponding web page
+    function catBioWriter(name) {}
 
     //Array of Images
     //Creating the array mainImageOps to hold the HTML for all three mainPageImage options
@@ -80,6 +91,7 @@ if(document.getElementById("indexBody")) {
         switch(mainIt) {
             case 0:
                 mainPageImageCol.innerHTML = mainImageOps[1];
+                
                 mainIt++;
                 break;
             case 1:
