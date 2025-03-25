@@ -35,11 +35,11 @@
     //Creating the array mainImageOps to hold the HTML for all three mainPageImage options
     const mainImageOps = [
         //First image
-        `<img src="/LampsAndSpringerSite/siteImages/lampsAndSpringer1.jpg" class="img-fluid" alt="" id="mainPageImage">`,
+        `<img src="/LampsAndSpringerSite/siteImages/lampsAndSpringer1.jpg" class="img-fluid imgPortrait" alt="" id="mainPageImage">`,
         //Second image
-        `<img src="/LampsAndSpringerSite/siteImages/lampsAndSpringer2.jpg" class="img-fluid" alt="" id="mainPageImage">`,
+        `<img src="/LampsAndSpringerSite/siteImages/lampsAndSpringer2.jpg" class="img-fluid imgPortrait" alt="" id="mainPageImage">`,
         //Third image
-        `<img src="/LampsAndSpringerSite/siteImages/lampsAndSpringer3.jpg" class="img-fluid" alt="" id="mainPageImage">`
+        `<img src="/LampsAndSpringerSite/siteImages/lampsAndSpringer3.jpg" class="img-fluid imgLandscape" alt="" id="mainPageImage">`
     ];
 
 
