@@ -91,12 +91,16 @@ if(document.getElementById("indexBody")) {
 
     mainPageImageCol.addEventListener("click", mainImageChange);
 
+    //Test
+    console.log("Main page!");
+
 }
 
 //---contactForm.html code---
 //Using an if statement to check if the id contactBody, which is the id of the <body> of contactForm.HTML is present
 if(document.getElementById("contactBody")) {
-
+    //Test
+    console.log("Form page!")
 }
 
 //---lampsPage.html code---
@@ -109,15 +113,15 @@ if(document.getElementById("lampsBody")) {
     
     //Events
     //Creating onload events to populate the lampsText and springerText variables with text
-    lampsText.addEventListener("load", (event) => {
+    window.addEventListener("load", (event) => {
         lampsText.innerHTML = "Super Cart!";
     });
-    }
+}
 
 
 //---springerPage.html code---
 //Using an if statement to check if the id springerBody, which is the id of the <body> of springerPage.HTML is present
-if(document.getElementById("contactBody")) {
+if(document.getElementById("springerBody")) {
     //Dom variables
     //Creatinge the variable springerText to hold the .springerText DOM node
     let springerText = document.getElementById("springerText");
@@ -125,10 +129,9 @@ if(document.getElementById("contactBody")) {
 
     //Events
     //Creating onload events to populate the lampsText and springerText variables with text
-    springerText.addEventListener("load", (event) => {
+    window.addEventListener("load", (event) => {
         springerText.innerHTML = "Drawer Queen!";
     });
-
 }
 
 
