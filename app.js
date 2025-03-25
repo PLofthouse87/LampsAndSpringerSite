@@ -48,14 +48,20 @@
 if(document.getElementById("indexBody")) {
     //DOM Variables
     //Creating the variable mainPageImage to hold the .mainPageImage DOM node
-    let mainPageImage = document.getElementById("mainPageImage");
+    // let mainPageImage = document.getElementById("mainPageImage");
     //Create the variable mainPageImageCol to hold the .mainPageImageCol node
     let mainPageImageCol = document.getElementById("mainPageImageCol");
 
     //Creating a click event for the DOM element held in the variable mainPageImage that prints to the console
-    mainPageImage.addEventListener("click", (event) => {
+    mainPageImageCol.addEventListener("click", (event) => {
         console.log("Click worked!");
     });
+
+    //Creating a "load" event to set the main page image as mainImageOps[0]
+    window.addEventListener("load", (event) => {
+        mainPageImageCol.innerHTML = mainImageOps[0];
+    });
+
 
     // //Creating a click event for the mainPageImage variable that will change the inner HTML of the DOM element held in mainPageImageCol variable
     // mainPageImage.addEventListener("click", (event) =>{
