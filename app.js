@@ -134,8 +134,20 @@ if(document.getElementById("indexBody")) {
 //---contactForm.html code---
 //Using an if statement to check if the id contactBody, which is the id of the <body> of contactForm.HTML is present
 if(document.getElementById("contactBody")) {
+    //Dom Variables
+    // Creating the variable contactFormFirstNam to hold the #contactFormFirstNam DOM element
+    let contactFormFirstNam = document.getElementById("contactFormFirstNam");
+    //Creating the RegExp object specCheck that checks for special characters and numbers
+    const specCheck = new RegExp
+
     //Test
     console.log("Form page!")
+    
+    //Creating a RegExp object to hold
+
+    //Creating a key up event to check if a number or special character has been entered
+
+
 }
 
 //---lampsPage.html code---

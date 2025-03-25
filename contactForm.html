@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <title>Contact Lamps and Springer</title>
 </head>
-<body>
-    <header id="contactBody">
+<body id="contactBody" class="bkGrnImg">
+    <header >
         <!--Navbar-->
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
           <div class="container-fluid">
@@ -35,46 +35,51 @@
                   </ul>
               </ul>
               <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" disabled>
+                <button class="btn btn-outline-success" type="submit" disabled>Search</button>
               </form>
             </div>
           </div>
         </nav>
         
         <!--Page title-->
-        <h1>Say hello to Lamps and Springer</h1>
+        <h1 class="d-flex justify-content-center">Say hello to Lamps and Springer</h1>
     </header>
 
     <!--The contact form-->
-    <form action="https://formspree.io/f/xldjljyp" method="POST">
-        <fieldset id="contactFormUserDetails" class="">
-            <!--Need to put the name fields in their own column-->
-            <div class="mb-3 col-6" id="contactFormFirstNamSet">
-                <label for="contactFormFirstNam" class="form-label">First Name:</label>
-                <input type="text" class="form-control" id="contactFormFirstNam" name="contactFormFirstNam">
-            </div>
-            <div class="mb-3 col-6" id="contactFormLastNamSet">
-                <label for="contactFormLastNam" class="form-label">Last Name:</label>
-                <input type="text" class="form-control" id="contactFormLastNam" name="contactFormLastNam">
-            </div>
-            <div class="mb-3 col-6" id="contactFormEmailSet">
-                <label for="contactFormEmail" class="form-label">Email Address:</label>
-                <input type="email" class="form-control" id="contactFormEmail" name="contactFormEmail">
-            </div>
-        </fieldset>
-        <fieldset id="contactFormMessageDetails">
-            <div class="mb-3 col-6" id="contactFormMessageSet">
-                <label for="contactFormMessage" class="form-label">Your Message for Springer and Lamps:</label>
-                <textarea class="form-control" id="contactFormMessage" name="contactFormMessage" rows="3"></textarea>
-            </div>
-        </fieldset>
-        <fieldset id="contactFormSubmitDetails">
-            <div class="mb-3 col-6" id="contactFormSubmitButtonSet">
-                <button type="submit" class="btn btn-primary" id="contactFormSubmitButton">Submit</button>
-            </div>
-        </fieldset>
-    </form>
+    <div class="row m-5">
+      <div class="col d-flex justify-content-center">
+        <form action="https://formspree.io/f/xldjljyp" method="POST" class="">
+          <fieldset id="contactFormUserDetails" class="row">
+              <!--Need to put the name fields in their own column-->
+              <div class="mb-3 col-5" id="contactFormFirstNamSet">
+                  <label for="contactFormFirstNam" class="form-label">First Name:</label>
+                  <input type="text" class="form-control" id="contactFormFirstNam" name="contactFormFirstNam" required>
+              </div>
+              <div class="mb-3 col-5" id="contactFormLastNamSet">
+                  <label for="contactFormLastNam" class="form-label">Last Name:</label>
+                  <input type="text" class="form-control" id="contactFormLastNam" name="contactFormLastNam" required>
+              </div>
+              <div class="row">
+              <div class="mb-3 col-6" id="contactFormEmailSet">
+                  <label for="contactFormEmail" class="form-label">Email Address:</label>
+                  <input type="email" class="form-control" id="contactFormEmail" name="contactFormEmail" required>
+              </div>
+              </div>
+          </fieldset>
+          <fieldset id="contactFormMessageDetails" class="">
+              <div class="mb-3 col-12" id="contactFormMessageSet">
+                  <label for="contactFormMessage" class="form-label">Your Message for Springer and Lamps:</label>
+                  <textarea class="form-control" id="contactFormMessage" name="contactFormMessage" rows="3" required></textarea>
+              </div>
+          </fieldset>
+          <fieldset id="contactFormSubmitDetails">
+              <input type="submit" value="Submit" name="submit">
+              </div>
+          </fieldset>
+        </form>
+    </div>
+  </div>
 
 
     <!--Scripts NO CONTENT BELOW HERE-->

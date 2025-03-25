@@ -7,7 +7,21 @@
 
 .imgPortrait {
     border-radius: 50%;
-    max-height: 45%;
+    /* max-height: 45%; */
     margin: auto;
     display: block
 }
+
+.containerSize {
+    max-height: auto;
+    max-width: 850px;
+}
+
+/* .bkGrnImg {
+    background-image: url(/LampsAndSpringerSite/siteImages/lampsAndSpringerContact.jpg);
+    background-size: 500px;
+    width:500px;
+    height: auto;
+    margin: auto;
+    display: block;
+} */
