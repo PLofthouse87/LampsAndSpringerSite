@@ -1,7 +1,13 @@
 .imgLandscape{
     border-radius: 50%;
+    max-width: 80%;
+    margin: auto;
+    display: block
 }
 
 .imgPortrait {
     border-radius: 50%;
+    max-height: 45%;
+    margin: auto;
+    display: block
 }
